@@ -90,7 +90,7 @@ function updateNetDisplay()
   
   function ageYear() {
     player.age += 1;
-    
+
     if (player.age === 18) {
       button1.textContent = "Go to work";
       player.salary = 8000;
@@ -100,6 +100,8 @@ function updateNetDisplay()
     } else if (player.age > 18 /*&& player.age < 30*/) {
       button1.textContent = player.buttonText3;
       player.money += player.salary * player.multi;
+    } else if (player.age < 18){
+        updateButton1Text();
     }
   
     if (player.age >= 18) {
